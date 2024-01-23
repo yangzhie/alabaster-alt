@@ -1,0 +1,42 @@
+<form action="/objects/<%= object.id %>?_method=put" method="post">
+    <label for="">NAME</label>
+    <input type="text" name="name" value="<%= object.name %>">
+    
+    <label for="">MAIN IMAGE</label>
+    <input type="text" name="image_url" value="<%= object.image_url %>">
+
+    <label for="">IMAGE ONE</label>
+    <input type="text" name="image_url_1" value="<%= object.image_url_1 %>">
+
+    <label for="">IMAGE TWO</label>
+    <input type="text" name="image_url_2" value="<%= object.image_url_2 %>">
+
+    <label for="">IMAGE THREE</label>
+    <input type="text" name="image_url_3" value="<%= object.image_url_3 %>">
+
+    <label for="">IMAGE FOUR</label>
+    <input type="text" name="image_url_4" value="<%= object.image_url_4 %>">
+
+    <label for="">IMAGE FIVE</label>
+    <input type="text" name="image_url_5" value="<%= object.image_url_5 %>">
+
+    <label for="">IMAGE SIX</label>
+    <input type="text" name="image_url_6" value="<%= object.image_url_6 %>">
+
+    <label for="">IMAGE SEVEN</label>
+    <input type="text" name="image_url_7" value="<%= object.image_url_7 %>">
+
+    <label for="">IMAGE EIGHT</label>
+    <input type="text" name="image_url_8" value="<%= object.image_url_8 %>">
+
+    <label for="">IMAGE NINE</label>
+    <input type="text" name="image_url_9" value="<%= object.image_url_9 %>">
+
+    <label for="">PRICE</label>
+    <input type="text" name="price" value="<%= object.price %>">
+
+    <label for="">DESCRIPTION</label>
+    <textarea name="description"><%= object.description %></textarea>
+
+    <button>UPDATE</button>
+</form>

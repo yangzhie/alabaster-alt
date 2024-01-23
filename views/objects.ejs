@@ -1,0 +1,15 @@
+<div class="objects-list-wrapper">
+
+    <% for(let object of objects) { %>
+    
+        <div class="ui-card">
+            <div>
+                <img src="<%= object.image_url %>" alt="">
+            </div>
+            <p><a href="/objects/<%= object.id %>"><%= object.name %></a></p>
+            <p><%= object.price %></p>
+        </div>
+    
+    <% } %>
+    
+    </div>

@@ -1,0 +1,21 @@
+<form action="/accessories/<%= accessorie.id %>?_method=put" method="post">
+    <label for="">NAME</label>
+    <input type="text" name="name" value="<%= accessorie.name %>">
+    
+    <label for="">MAIN IMAGE</label>
+    <input type="text" name="image_url" value="<%= accessorie.image_url %>">
+
+    <label for="">IMAGE ONE</label>
+    <input type="text" name="image_url_1" value="<%= accessorie.image_url_1 %>">
+
+    <label for="">IMAGE TWO</label>
+    <input type="text" name="image_url_2" value="<%= accessorie.image_url_2 %>">
+
+    <label for="">PRICE</label>
+    <input type="text" name="price" value="<%= accessorie.price %>">
+
+    <label for="">DESCRIPTION</label>
+    <textarea name="description"><%= accessorie.description %></textarea>
+
+    <button>UPDATE</button>
+</form>

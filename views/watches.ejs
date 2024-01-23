@@ -1,0 +1,15 @@
+<div class="watches-list-wrapper">
+
+<% for(let watch of watches) { %>
+
+    <div class="ui-card">
+        <div>
+            <img src="<%= watch.image_url %>" alt="">
+        </div>
+        <p><a href="/watches/<%= watch.id %>"><%= watch.name %></a></p>
+        <p><%= watch.price %></p>
+    </div>
+
+<% } %>
+
+</div>

@@ -1,0 +1,15 @@
+<form action="/watches/<%= watch.id %>?_method=put" method="post">
+    <label for="">NAME</label>
+    <input type="text" name="name" value="<%= watch.name %>">
+    
+    <label for="">IMAGE</label>
+    <input type="text" name="image_url" value="<%= watch.image_url %>">
+
+    <label for="">PRICE</label>
+    <input type="text" name="price" value="<%= watch.price %>">
+
+    <label for="">DESCRIPTION</label>
+    <textarea name="description"><%= watch.description %></textarea>
+
+    <button>UPDATE</button>
+</form>

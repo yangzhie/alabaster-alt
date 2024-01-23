@@ -1,0 +1,16 @@
+<img src="<%= watch.image_url %>" alt="">
+<p>Alabaster</p>
+<p><%= watch.name %></p>
+<p><%= watch.price %></p>
+<a href="/watches/<%= watch.id %>/edit">EDIT WATCH</a>
+<p><a href="">Shipping</a> calculated at checkout</p>
+
+<div>
+    <div>
+        <button>ADD TO CART</button>
+        <button>Buy with <img src="https://www.pagetraffic.com/blog/wp-content/uploads/2022/05/about-shop-pay.jpg" alt=""></button>
+    </div>
+    <div>
+        <%= watch.description %>
+    </div>
+</div>

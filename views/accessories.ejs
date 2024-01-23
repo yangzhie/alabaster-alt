@@ -1,0 +1,15 @@
+<div class="accessories-list-wrapper">
+
+    <% for(let accessorie of accessories) { %>
+    
+        <div class="ui-card">
+            <div>
+                <img src="<%= accessorie.image_url %>" alt="">
+            </div>
+            <p><a href="/accessories/<%= accessorie.id %>"><%= accessorie.name %></a></p>
+            <p><%= accessorie.price %></p>
+        </div>
+    
+    <% } %>
+    
+    </div>
