@@ -1,24 +1,24 @@
+<div class="w-i-img">
 <img src="<%= watch.image_url %>" alt="">
-<p>Alabaster</p>
-<p><%= watch.name %></p>
-<p><%= watch.price %></p>
+</div>
 
-<% console.log(currentUser.user_type) %>
+<p class="alabaster">Alabaster</p>
+<p class="w-i-name"><%= watch.name %></p>
+<p class="w-i-price">$<%= watch.price %>.00 AUD</p>
 
 <% if(currentUser.user_type === "administrator")  { %>
 
-<a href="/watches/<%= watch.id %>/edit">EDIT WATCH</a>
+<a href="/watches/<%= watch.id %>/edit" class="edit-watch">EDIT WATCH</a>
 
 <% } %>
 
-<p><a href="">Shipping</a> calculated at checkout</p>
+<p class="shipping"><a href="">Shipping</a> calculated at checkout</p>
 
-<div>
-    <div>
+<div class="w-i-wrapper">
+    <div class="w-i-buttons">
         <button>ADD TO CART</button>
-        <button>Buy with <img src="https://www.pagetraffic.com/blog/wp-content/uploads/2022/05/about-shop-pay.jpg" alt=""></button>
     </div>
-    <div>
+    <div class="w-i-description">
         <%= watch.description %>
     </div>
 </div>

@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alabaster</title>
     <link rel="stylesheet" href="/styles-login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="shortcut icon" href="//alabaster.industries/cdn/shop/files/favicon-32x32_32x32.png?v=1679069518" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <div>
+        <a href="">
+            <img src="https://alabaster.industries/cdn/shop/files/headerlogo_x60.png?v=1614318120" alt="">
+        </a>
+    </div>
+
+    <div class="bg-vid">
+        <video src="/images/new-bg-clip.mp4" autoplay muted loop class="bg-clip"></video>
+    </div>
+
+    <div class="container">
+
+        <form action="/login" method="post">
+        
+          <label for="username">USERNAME:</label>
+          <input type="text" id="username" name="username" required>
+        
+          <label for="password">PASSWORD:</label>
+          <input type="password" id="password" name="password" required>
+        
+          <button type="submit">Login</button>
+          
+        </form>
+      
+      </div>
 </body>
 </html> 

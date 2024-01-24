@@ -3,8 +3,8 @@ const router = express.Router();
 const db = require("../db/index");
 const ensureLoggedIn = require('../middlewares/ensure-logged-in')
 
-router.get("/", ensureLoggedIn, (req, res) => {
-    res.render("home");
+router.get("/", (req, res) => {
+    res.redirect("login");
 });
 
 router.get("/collections", ensureLoggedIn, (req, res) => {

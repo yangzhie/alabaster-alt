@@ -1,27 +1,30 @@
+<div class="o-i-img">
 <img src="<%= object.image_url %>" alt="">
-<p>Alabaster</p>
-<p><%= object.name %></p>
-<p><%= object.price %></p>
+</div>
+
+<p class="alabaster">Alabaster</p>
+<p class="o-i-name"><%= object.name %></p>
+<p class="o-i-price">$<%= object.price %>.00 AUD</p>
 
 <% if(currentUser.user_type === "administrator")  { %>
 
-<a href="/objects/<%= object.id %>/edit">EDIT OBJECT</a>
+<a href="/objects/<%= object.id %>/edit" class="edit-object">EDIT OBJECT</a>
 
 <% } %>
 
-<p><a href="">Shipping</a> calculated at checkout</p>
+<p class="shipping"><a href="">Shipping</a> calculated at checkout</p>
 
-<div>
-    <div>
+
+<div class="o-i-wrapper">
+    <div class="o-i-buttons">
         <button>ADD TO CART</button>
-        <button>Buy with <img src="https://www.pagetraffic.com/blog/wp-content/uploads/2022/05/about-shop-pay.jpg" alt=""></button>
     </div>
-    <div>
+    <div class="o-i-description">
         <%= object.description %>
     </div>
 </div>
 
-<div>
+<div class="o-i-bot-img">
     <div>
         <img src="<%= object.image_url_1 %>" alt="">
     </div>

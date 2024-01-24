@@ -1,21 +1,23 @@
-<form action="/accessories" method="post">
-    <label for="">NAME</label>
+<h2 style="color: white; text-align: center;">CREATE A NEW WATCH</h2>
+
+<form action="/accessories" method="post" class="form-main">
+    <label for="" class="label-name">NAME</label>
     <input type="text" name="name">
     
-    <label for="">MAIN IMAGE</label>
+    <label for="" class="label-image">MAIN IMAGE</label>
     <input type="text" name="image_url">
 
-    <label for="">IMAGE ONE</label>
+    <label for="" class="label-image">IMAGE ONE</label>
     <input type="text" name="image_url_1">
 
-    <label for="">IMAGE TWO</label>
+    <label for="" class="label-image">IMAGE TWO</label>
     <input type="text" name="image_url_2">
 
-    <label for="">PRICE</label>
+    <label for="" class="label-price">PRICE</label>
     <input type="text" name="price">
 
-    <label for="">DESCRIPTION</label>
+    <label for="" class="label-description">DESCRIPTION</label>
     <textarea name="description"></textarea>
 
-    <button>POST</button>
+    <button class="post-edit-btn">POST</button>
 </form>

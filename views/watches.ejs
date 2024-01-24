@@ -2,12 +2,12 @@
 
 <% for(let watch of watches) { %>
 
-    <div class="ui-card">
-        <div>
+    <div class="w-ui-card">
+        <div class="w-img">
             <img src="<%= watch.image_url %>" alt="">
         </div>
-        <p><a href="/watches/<%= watch.id %>"><%= watch.name %></a></p>
-        <p><%= watch.price %></p>
+        <p class="a-name"><a href="/watches/<%= watch.id %>"><%= watch.name %></a></p>
+        <p class="a-price">$<%= watch.price %>.00 AUD</p>
     </div>
 
 <% } %>

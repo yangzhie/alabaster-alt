@@ -2,7 +2,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: 'Padauk', sans-serif;
+    font-weight: bold;
+    background-color: black;
+}
+
+img {
+    transition: transform .6s;
+}
+
+img:hover {
+    transform: scale(0.8);
 }
 
 a:link {
@@ -11,6 +21,7 @@ a:link {
 
 a:visited {
     text-decoration: none;
+    color: white;
 }
 
 a:hover {
@@ -21,20 +32,729 @@ a:active {
     text-decoration: none;
 }
 
-/* .container {
-    width: 100%;
-    background-color: #ccc;
+
+
+
+
+
+
+
+/* COLLECTIONS PAGE */
+
+
+.header,
+.footer {
+    background-color: black;
+    color: white;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-nav a:hover {
+    background-color: black;
+    color: red;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+nav ul,
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li,
+.footer-nav li {
+    margin: 0 15px;
+}
+
+.logout-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: black;
+    color: red;
+}
+
+.footer {
+    font-size: 80%;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+nav ul,
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-nav a:hover {
+    background-color: black;
+    color: red;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+.watch h5:hover {
+    background-color: black;
+    color: red;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.secret-div {
+    background-color: black;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.create {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.create:hover {
+    background-color: black;
+    color: red;
+}
+
+.watch {
+    text-align: center;
+}
+
+.object {
+    text-align: center;
+}
+
+.accessorie {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ACCESSRORIES LIST PAGE */
+
+
+.accessories-list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-items: center;
+    padding-top: 100px;
+}
+
+.a-ui-card {
+    width: 200px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     justify-content: center;
 }
 
-.bg-clip { */
-/* min-width: 100%;
-    min-height: 100%; */
-/* height: 100vh; */
-/* position: fixed;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-} */
+.a-img img {
+    width: 100%;
+    height: auto;
+}
+
+.a-name,
+.a-price {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.a-name {
+    font-weight: bold;
+}
+
+.a-name a {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.a-name:hover a {
+    background-color: black;
+    color: red;
+
+}
+
+.a-price {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* WATCHES LIST PAGE */
+
+
+.watches-list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-items: center;
+    padding-top: 100px;
+}
+
+.w-ui-card {
+    width: 200px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.w-img img {
+    width: 100%;
+    height: auto;
+}
+
+.w-name,
+.w-price {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.w-name {
+    font-weight: bold;
+
+}
+
+.a-name a {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.w-name:hover a {
+    background-color: black;
+    color: red;
+
+}
+
+.w-price {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OBJECTS LIST PAGE */
+
+
+.objects-list-wrapper {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-items: center;
+    padding-top: 100px;
+}
+
+.o-ui-card {
+    width: 200px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.o-img img {
+    width: 100%;
+    height: auto;
+}
+
+.o-name,
+.o-price {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.o-name {
+    font-weight: bold;
+}
+
+.o-name a {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.o-name:hover a {
+    background-color: black;
+    color: red;
+
+}
+
+.o-price {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* WATCHES INFO PAGE */
+
+.alabaster {
+    color: white;
+    padding-left: 785px;
+}
+
+.w-i-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.w-i-img img {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.w-i-name {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.w-i-price {
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.w-i-name,
+.w-i-price {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.edit-watch {
+    color: #007bff;
+    text-align: center;
+    color: white;
+    padding-left: 771px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-watch:hover {
+    background-color: black;
+    color: red;
+}
+
+.shipping {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+}
+
+.w-i-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.w-i-buttons,
+.w-i-description {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.w-i-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.w-i-buttons button:hover {
+    background-color: white;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OBJECTS INFO PAGE */
+
+
+.alabaster {
+    color: white;
+    padding-left: 785px;
+}
+
+.o-i-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.o-i-img img {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.o-i-name {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.o-i-price {
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.o-i-name,
+.o-i-price {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.edit-object {
+    color: #007bff;
+    text-align: center;
+    color: white;
+    padding-left: 771px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-object:hover {
+    background-color: black;
+    color: red;
+}
+
+.shipping {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+}
+
+.o-i-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.o-i-buttons,
+.o-i-description {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.o-i-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.o-i-buttons button:hover {
+    background-color: white;
+    color: red;
+}
+
+.o-i-bot-img {
+    display: flex;
+    justify-content: center;
+}
+
+.o-i-bot-img img {
+    width: 400px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ACCESSORY INFO PAGE */
+
+
+.alabaster {
+    color: white;
+    padding-left: 785px;
+    padding-top: 15px;
+}
+
+.a-i-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.a-i-img img {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.a-i-name {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.a-i-price {
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.a-i-name,
+.a-i-price {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.edit-accessorie {
+    color: #007bff;
+    text-align: center;
+    color: white;
+    padding-left: 771px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-accessorie:hover {
+    background-color: black;
+    color: red;
+}
+
+.shipping {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+}
+
+.a-i-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.a-i-buttons,
+.a-i-description {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.a-i-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.a-i-buttons button:hover {
+    background-color: white;
+    color: red;
+}
+
+.a-i-bot-img {
+    display: flex;
+    justify-content: center;
+}
+
+.a-i-bot-img img {
+    width: 400px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NEW EVERYTHING */
+
+
+.form-main {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.label-name,
+.label-image,
+.label-price,
+.label-description {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input:hover,
+textarea:hover {
+    background-color: white;
+}
+
+button.post-edit-btn {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.post-edit-btn:hover {
+    background-color: black;
+    color: red;
+}

@@ -1,29 +1,32 @@
+<div class="a-i-img">
 <img src="<%= accessorie.image_url %>" alt="">
-<p>Alabaster</p>
-<p><%= accessorie.name %></p>
-<p><%= accessorie.price %></p>
+</div>
+
+<p class="alabaster">Alabaster</p>
+<p class="a-i-name"><%= accessorie.name %></p>
+<p class="a-i-price">$<%= accessorie.price %>.00 AUD</p>
 
 <% if(currentUser.user_type === "administrator")  { %>
 
-<a href="/accessories/<%= accessorie.id %>/edit">EDIT ACCESSORY</a>
+<a href="/accessories/<%= accessorie.id %>/edit" class="edit-accessorie">EDIT ACCESSORY</a>
 
 <% } %>
 
-<p><a href="">Shipping</a> calculated at checkout</p>
+<p class="shipping"><a href="">Shipping</a> calculated at checkout</p>
 
 
 
-<div>
-    <div>
+<div class="a-i-wrapper">
+    <div class="a-i-buttons">
         <button>ADD TO CART</button>
-        <button>Buy with <img src="https://www.pagetraffic.com/blog/wp-content/uploads/2022/05/about-shop-pay.jpg" alt=""></button>
     </div>
-    <div>
+    <div class="a-i-description">
         <%= accessorie.description %>
     </div>
 </div>
 
-<div>
+
+<div class="a-i-bot-img">
     <div>
         <img src="<%= accessorie.image_url_1 %>" alt="">
     </div>

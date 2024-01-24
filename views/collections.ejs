@@ -1,46 +1,58 @@
-<h4>All collections</h4>
+
+<h4>ALL COLLECTIONS</h4>
+
+<div class="wrapper">
 
 <div class="watch">
     <a href="/watches">
-        <img src="https://alabaster.industries/cdn/shop/files/Dec_Allprod_Onblack_0011_coreonblack_DEC_0000_Layer4.jpg?v=1701833977" alt="">
+        <img src="https://alabaster.industries/cdn/shop/collections/Dec_Allprod_Onblack_0002_AllprodOblack_0007_Layer_3_copy_360x.jpg?v=1701886483" alt="">
     </a>
-    <h5>Watches</h5>
-</div>
+    <h5><a href="/watches" class="create">WATCHES</a></h5>
+
 
 <% if(currentUser.user_type === "administrator")  { %>
 
-<div>
-    <a href="/watches/new">CREATE A WATCH</a>
+<div class="secret-div">
+    <a href="/watches/new" class="create">CREATE A WATCH</a>
 </div>
 
 <% } %>
+
+</div>
+
+</div>
 
 <div class="object">
     <a href="/objects">
         <img src="https://alabaster.industries/cdn/shop/collections/BkackTest2_360x.jpg?v=1648138613" alt="">
     </a>
-    <h5>Objects</h5>
-</div>
+    <h5><a href="/objects" class="create">OBJECTS</a></h5>
 
 <% if(currentUser.user_type === "administrator")  { %>
 
-<div>
-    <a href="/objects/new">CREATE AN OBJECT</a>
+<div class="secret-div">
+    <a href="/objects/new" class="create">CREATE AN OBJECT</a>
 </div>
 
 <% } %>
+
+</div>
 
 <div class="accessorie">
     <a href="/accessories">
         <img src="https://alabaster.industries/cdn/shop/collections/Lighter_bracelet_export_0000_Bracelet_OnblackProd_360x.jpg?v=1701889149" alt="">
     </a>
-    <h5>Accessories</h5>
-</div>
+    <h5><a href="/accessories" class="create">ACCESSORIES</a></h5>
+
 
 <% if(currentUser.user_type === "administrator")  { %>
 
-<div>
-    <a href="/accessories/new">CREATE AN ACCESSORY</a>
+<div class="secret-div">
+    <a href="/accessories/new" class="create">CREATE AN ACCESSORY</a>
 </div>
 
 <% } %>
+
+</div>
+
+</div>

@@ -2,12 +2,12 @@
 
     <% for(let object of objects) { %>
     
-        <div class="ui-card">
-            <div>
+        <div class="o-ui-card">
+            <div class="o-img">
                 <img src="<%= object.image_url %>" alt="">
             </div>
-            <p><a href="/objects/<%= object.id %>"><%= object.name %></a></p>
-            <p><%= object.price %></p>
+            <p class="o-name"><a href="/objects/<%= object.id %>"><%= object.name %></a></p>
+            <p class="o-price">$<%= object.price %>.00 AUD</p>
         </div>
     
     <% } %>

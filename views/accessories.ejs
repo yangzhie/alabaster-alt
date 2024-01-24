@@ -2,14 +2,14 @@
 
     <% for(let accessorie of accessories) { %>
     
-        <div class="ui-card">
-            <div>
+        <div class="a-ui-card">
+            <div class="a-img">
                 <img src="<%= accessorie.image_url %>" alt="">
             </div>
-            <p><a href="/accessories/<%= accessorie.id %>"><%= accessorie.name %></a></p>
-            <p><%= accessorie.price %></p>
+            <p class="a-name"><a href="/accessories/<%= accessorie.id %>"><%= accessorie.name %></a></p>
+            <p class="a-price">$<%= accessorie.price %>.00 AUD</p>
         </div>
     
     <% } %>
     
-    </div>
+</div>

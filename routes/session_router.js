@@ -58,7 +58,7 @@ router.post("/login", (req, res) => {
             }
 
             req.session.userId = result.rows[0].id;
-            res.redirect("/");
+            res.redirect("/collections");
 
         });
     });

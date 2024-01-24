@@ -1,15 +1,17 @@
-<form action="/watches/<%= watch.id %>?_method=put" method="post">
-    <label for="">NAME</label>
+<h3 style="color: white; text-align: center;">EDIT <%= watch.name %></h3>
+
+<form action="/watches/<%= watch.id %>?_method=put" method="post" class="form-main">
+    <label for="" class="label-name">NAME</label>
     <input type="text" name="name" value="<%= watch.name %>">
     
-    <label for="">IMAGE</label>
+    <label for="" class="label-image">IMAGE</label>
     <input type="text" name="image_url" value="<%= watch.image_url %>">
 
-    <label for="">PRICE</label>
+    <label for="" class="label-price">PRICE</label>
     <input type="text" name="price" value="<%= watch.price %>">
 
-    <label for="">DESCRIPTION</label>
+    <label for="" class="label-description">DESCRIPTION</label>
     <textarea name="description"><%= watch.description %></textarea>
 
-    <button>UPDATE</button>
+    <button class="post-edit-btn">UPDATE</button>
 </form>
