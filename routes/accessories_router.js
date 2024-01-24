@@ -50,6 +50,27 @@ router.get("/accessories/:id", ensureLoggedIn, (req, res) => {
 
 });
 
+router.delete('/accessories/:id', ensureLoggedIn, (req, res) => {
+
+    const sql = `
+      DELETE FROM accessories WHERE id = $1 RETURNING *;
+    `;
+
+    db.query(sql, [req.params.id], (err, result) => {
+
+        if (err) {
+
+            console.log(err);
+
+        }
+
+        console.log(result.rows);
+
+        res.redirect('/accessories');
+
+    });
+});
+
 router.post("/accessories", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
@@ -60,9 +81,12 @@ router.post("/accessories", ensureLoggedIn, auth, (req, res) => {
     let description = req.body.description;
 
     const sql = `
-    INSTER INTO accessories (name, image_url, image_url_1, image_url_2, price, description)
+    INSERT INTO accessories (name, image_url, image_url_1, image_url_2, price, description)
     VALUES ($1, $2, $3, $4, $5, $6);
-    `
+    `;
+
+    // converts the price to null if it not a string
+    price = price !== '' && !isNaN(price) ? price : null;
 
     let arr = [name, imageUrl, imageUrl1, imageUrl2, price, description];
 
@@ -120,6 +144,8 @@ router.put("/accessories/:id", ensureLoggedIn, auth, (req, res) => {
         description = $6
       WHERE id = $7;
     `;
+
+    price = price === '' ? null : price;
 
     let arr = [name, imageUrl, imageUrl1, imageUrl2, price, description, req.params.id];
 

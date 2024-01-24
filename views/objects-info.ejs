@@ -10,6 +10,10 @@
 
 <a href="/objects/<%= object.id %>/edit" class="edit-object">EDIT OBJECT</a>
 
+<form action="/objects/<%= object.id %>?_method=delete" method="post">
+    <button class="delete-btn">DELETE</button>
+</form>
+
 <% } %>
 
 <p class="shipping"><a href="">Shipping</a> calculated at checkout</p>

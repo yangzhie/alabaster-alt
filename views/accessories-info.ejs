@@ -10,6 +10,10 @@
 
 <a href="/accessories/<%= accessorie.id %>/edit" class="edit-accessorie">EDIT ACCESSORY</a>
 
+<form action="/accessories/<%= accessorie.id %>?_method=delete" method="post">
+    <button class="delete-btn">DELETE</button>
+</form>
+
 <% } %>
 
 <p class="shipping"><a href="">Shipping</a> calculated at checkout</p>

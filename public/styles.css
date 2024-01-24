@@ -758,3 +758,28 @@ button.post-edit-btn:hover {
     background-color: black;
     color: red;
 }
+
+
+
+
+
+
+
+
+/* DELETE BTN */
+.delete-btn {
+    color: #007bff;
+    text-align: center;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    justify-self: center;
+    padding-left: 789px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: black;
+    color: red;
+}

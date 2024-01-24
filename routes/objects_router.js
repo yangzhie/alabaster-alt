@@ -50,6 +50,27 @@ router.get("/objects/:id", ensureLoggedIn, (req, res) => {
 
 });
 
+router.delete('/objects/:id', ensureLoggedIn, (req, res) => {
+
+    const sql = `
+      DELETE FROM objects WHERE id = $1 RETURNING *;
+    `;
+
+    db.query(sql, [req.params.id], (err, result) => {
+
+        if (err) {
+
+            console.log(err);
+
+        }
+
+        console.log(result.rows);
+
+        res.redirect('/objects');
+
+    });
+});
+
 router.post("/objects", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
@@ -66,8 +87,11 @@ router.post("/objects", ensureLoggedIn, auth, (req, res) => {
     let price = req.body.price;
     let description = req.body.description;
 
+    // converts the price to null if it not a string
+    price = price !== '' && !isNaN(price) ? price : null;
+
     const sql = `
-    INSTER INTO objects (name, image_url, image_url_1, image_url_2, image_url_3, image_url_4, image_url_5, image_url_6, image_url_7, image_url_8, image_url_9, price, description)
+    INSERT INTO objects (name, image_url, image_url_1, image_url_2, image_url_3, image_url_4, image_url_5, image_url_6, image_url_7, image_url_8, image_url_9, price, description)
     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);
     `
 
@@ -141,6 +165,8 @@ router.put("/objects/:id", ensureLoggedIn, auth, (req, res) => {
         description = $13
       WHERE id = $14;
     `;
+
+    price = price === '' ? null : price;
 
     let arr = [name, imageUrl, imageUrl1, imageUrl2, imageUrl3, imageUrl4, imageUrl5, imageUrl6, imageUrl7, imageUrl8, imageUrl9, price, description, req.params.id];
 

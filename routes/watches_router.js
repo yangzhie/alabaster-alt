@@ -50,6 +50,27 @@ router.get("/watches/:id", ensureLoggedIn, (req, res) => {
 
 });
 
+router.delete('/watches/:id', ensureLoggedIn, (req, res) => {
+
+    const sql = `
+      DELETE FROM watches WHERE id = $1 RETURNING *;
+    `;
+
+    db.query(sql, [req.params.id], (err, result) => {
+
+        if (err) {
+
+            console.log(err);
+
+        }
+
+        console.log(result.rows);
+
+        res.redirect('/watches');
+
+    });
+});
+
 router.post("/watches", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
@@ -57,10 +78,13 @@ router.post("/watches", ensureLoggedIn, auth, (req, res) => {
     let price = req.body.price;
     let description = req.body.description;
 
+    // converts the price to null if it not a string
+    price = price !== '' && !isNaN(price) ? price : null;
+
     const sql = `
-    INSTER INTO watches (name, image_url, price, description)
+    INSERT INTO watches (name, image_url, price, description)
     VALUES ($1, $2, $3, $4);
-    `
+    `;
 
     let arr = [name, imageUrl, price, description];
 
@@ -82,7 +106,7 @@ router.get("/watches/:id/edit", ensureLoggedIn, auth, (req, res) => {
     const sql = `
       SELECT * FROM watches
       WHERE id = $1;
-    `
+    `;
 
     db.query(sql, [req.params.id], (err, result) => {
 
@@ -104,6 +128,8 @@ router.put("/watches/:id", ensureLoggedIn, auth, (req, res) => {
     let imageUrl = req.body.image_url;
     let price = req.body.price;
     let description = req.body.description;
+
+    price = price === '' ? null : price;
 
     const sql = `
       UPDATE watches
