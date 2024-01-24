@@ -2,8 +2,16 @@
 <p>Alabaster</p>
 <p><%= accessorie.name %></p>
 <p><%= accessorie.price %></p>
+
+<% if(currentUser.user_type === "administrator")  { %>
+
 <a href="/accessories/<%= accessorie.id %>/edit">EDIT ACCESSORY</a>
+
+<% } %>
+
 <p><a href="">Shipping</a> calculated at checkout</p>
+
+
 
 <div>
     <div>

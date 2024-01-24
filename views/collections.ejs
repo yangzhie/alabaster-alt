@@ -7,9 +7,13 @@
     <h5>Watches</h5>
 </div>
 
+<% if(currentUser.user_type === "administrator")  { %>
+
 <div>
     <a href="/watches/new">CREATE A WATCH</a>
 </div>
+
+<% } %>
 
 <div class="object">
     <a href="/objects">
@@ -18,9 +22,13 @@
     <h5>Objects</h5>
 </div>
 
+<% if(currentUser.user_type === "administrator")  { %>
+
 <div>
     <a href="/objects/new">CREATE AN OBJECT</a>
 </div>
+
+<% } %>
 
 <div class="accessorie">
     <a href="/accessories">
@@ -29,6 +37,10 @@
     <h5>Accessories</h5>
 </div>
 
+<% if(currentUser.user_type === "administrator")  { %>
+
 <div>
     <a href="/accessories/new">CREATE AN ACCESSORY</a>
 </div>
+
+<% } %>

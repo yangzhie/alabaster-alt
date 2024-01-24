@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../db/index");
+const ensureLoggedIn = require("../middlewares/ensure-logged-in");
+const auth = require("../middlewares/auth");
 
-router.get("/accessories", (req, res) => {
+router.get("/accessories", ensureLoggedIn, (req, res) => {
 
     const sql = 'SELECT * FROM accessories;';
 
@@ -20,13 +22,13 @@ router.get("/accessories", (req, res) => {
     });
 });
 
-router.get("/accessories/new", (req, res) => {
+router.get("/accessories/new", ensureLoggedIn, auth, (req, res) => {
 
     res.render("accessories-new");
 
 });
 
-router.get("/accessories/:id", (req, res) => {
+router.get("/accessories/:id", ensureLoggedIn, (req, res) => {
 
     let id = req.params.id;
 
@@ -48,7 +50,7 @@ router.get("/accessories/:id", (req, res) => {
 
 });
 
-router.post("/accessories", (req, res) => {
+router.post("/accessories", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
     let imageUrl = req.body.image_url;
@@ -77,7 +79,7 @@ router.post("/accessories", (req, res) => {
     });
 });
 
-router.get('/accessories/:id/edit', (req, res) => {
+router.get("/accessories/:id/edit", ensureLoggedIn, auth, (req, res) => {
 
     const sql = `
       SELECT * FROM accessories
@@ -88,7 +90,7 @@ router.get('/accessories/:id/edit', (req, res) => {
 
         if (err) {
 
-            console.log(err)
+            console.log(err);
 
         }
 
@@ -98,7 +100,7 @@ router.get('/accessories/:id/edit', (req, res) => {
     });
 });
 
-router.put('/accessories/:id', (req, res) => {
+router.put("/accessories/:id", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
     let imageUrl = req.body.image_url;

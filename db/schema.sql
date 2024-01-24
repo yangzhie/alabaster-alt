@@ -6,6 +6,7 @@ CREATE TABLE watches(
     image_url TEXT,
     price INTEGER,
     description TEXT
+    user_id INTEGER
 );
 
 CREATE TABLE objects(
@@ -23,6 +24,7 @@ CREATE TABLE objects(
     image_url_9 TEXT,
     price INTEGER,
     description TEXT
+    user_id INTEGER
 );
 
 CREATE TABLE accessories(
@@ -33,6 +35,7 @@ CREATE TABLE accessories(
     image_url_2 TEXT,
     price INTEGER,
     description TEXT
+    user_id INTEGER
 );
 
 CREATE TABLE users(

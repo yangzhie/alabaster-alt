@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../db/index");
+const ensureLoggedIn = require("../middlewares/ensure-logged-in");
+const auth = require("../middlewares/auth");
 
-router.get("/watches", (req, res) => {
+router.get("/watches", ensureLoggedIn, (req, res) => {
 
     const sql = 'SELECT * FROM watches;';
 
@@ -20,13 +22,13 @@ router.get("/watches", (req, res) => {
     });
 });
 
-router.get("/watches/new", (req, res) => {
+router.get("/watches/new", ensureLoggedIn, auth, (req, res) => {
 
     res.render("watches-new");
 
 });
 
-router.get("/watches/:id", (req, res) => {
+router.get("/watches/:id", ensureLoggedIn, (req, res) => {
 
     let id = req.params.id;
 
@@ -48,7 +50,7 @@ router.get("/watches/:id", (req, res) => {
 
 });
 
-router.post("/watches", (req, res) => {
+router.post("/watches", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
     let imageUrl = req.body.image_url;
@@ -75,7 +77,7 @@ router.post("/watches", (req, res) => {
     });
 });
 
-router.get('/watches/:id/edit', (req, res) => {
+router.get("/watches/:id/edit", ensureLoggedIn, auth, (req, res) => {
 
     const sql = `
       SELECT * FROM watches
@@ -86,17 +88,17 @@ router.get('/watches/:id/edit', (req, res) => {
 
         if (err) {
 
-            console.log(err)
+            console.log(err);
 
         }
 
         let watch = result.rows[0];
-        res.render('watches-edit', { watch: watch });
+        res.render("watches-edit", { watch: watch });
 
     });
 });
 
-router.put('/watches/:id', (req, res) => {
+router.put("/watches/:id", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
     let imageUrl = req.body.image_url;

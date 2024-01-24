@@ -2,7 +2,13 @@
 <p>Alabaster</p>
 <p><%= object.name %></p>
 <p><%= object.price %></p>
+
+<% if(currentUser.user_type === "administrator")  { %>
+
 <a href="/objects/<%= object.id %>/edit">EDIT OBJECT</a>
+
+<% } %>
+
 <p><a href="">Shipping</a> calculated at checkout</p>
 
 <div>

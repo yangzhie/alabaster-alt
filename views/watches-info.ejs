@@ -2,7 +2,15 @@
 <p>Alabaster</p>
 <p><%= watch.name %></p>
 <p><%= watch.price %></p>
+
+<% console.log(currentUser.user_type) %>
+
+<% if(currentUser.user_type === "administrator")  { %>
+
 <a href="/watches/<%= watch.id %>/edit">EDIT WATCH</a>
+
+<% } %>
+
 <p><a href="">Shipping</a> calculated at checkout</p>
 
 <div>

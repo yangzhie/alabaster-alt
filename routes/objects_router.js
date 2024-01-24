@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../db/index");
+const ensureLoggedIn = require("../middlewares/ensure-logged-in");
+const auth = require("../middlewares/auth");
 
-router.get("/objects", (req, res) => {
+router.get("/objects", ensureLoggedIn, (req, res) => {
 
     const sql = 'SELECT * FROM objects;';
 
@@ -20,13 +22,13 @@ router.get("/objects", (req, res) => {
     });
 });
 
-router.get("/objects/new", (req, res) => {
+router.get("/objects/new", ensureLoggedIn, auth, (req, res) => {
 
     res.render("objects-new");
 
 });
 
-router.get("/objects/:id", (req, res) => {
+router.get("/objects/:id", ensureLoggedIn, (req, res) => {
 
     let id = req.params.id;
 
@@ -48,7 +50,7 @@ router.get("/objects/:id", (req, res) => {
 
 });
 
-router.post("/objects", (req, res) => {
+router.post("/objects", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
     let imageUrl = req.body.image_url;
@@ -84,7 +86,7 @@ router.post("/objects", (req, res) => {
     });
 });
 
-router.get('/objects/:id/edit', (req, res) => {
+router.get("/objects/:id/edit", ensureLoggedIn, auth, (req, res) => {
 
     const sql = `
       SELECT * FROM objects
@@ -95,17 +97,17 @@ router.get('/objects/:id/edit', (req, res) => {
 
         if (err) {
 
-            console.log(err)
+            console.log(err);
 
         }
 
         let object = result.rows[0];
-        res.render('objects-edit', { object: object });
+        res.render("objects-edit", { object: object });
 
     });
 });
 
-router.put('/objects/:id', (req, res) => {
+router.put("/objects/:id", ensureLoggedIn, auth, (req, res) => {
 
     let name = req.body.name;
     let imageUrl = req.body.image_url;
