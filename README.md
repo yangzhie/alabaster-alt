@@ -26,8 +26,8 @@ This application is an alternative site to alabaster.industries. It is styled di
 ## Getting Started
 
 ### Deployed App
-[Include a link to the deployed app.]
-[Example: [Alabaster Alt](https://your-app-url.com)]
+
+None ATM
 
 ### Project Board
 
