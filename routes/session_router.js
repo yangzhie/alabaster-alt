@@ -6,7 +6,7 @@ const expressLayouts = require("express-ejs-layouts");;
 
 router.get("/login", (req, res) => {
 
-    res.render("login", { layout: "login-layout" });
+    res.render("login-layout", { layout: "login-layout" });
 
 });
 

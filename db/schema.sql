@@ -5,7 +5,7 @@ CREATE TABLE watches(
     name TEXT,
     image_url TEXT,
     price INTEGER,
-    description TEXT
+    description TEXT,
     user_id INTEGER
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE objects(
     image_url_8 TEXT,
     image_url_9 TEXT,
     price INTEGER,
-    description TEXT
+    description TEXT,
     user_id INTEGER
 );
 
@@ -34,7 +34,7 @@ CREATE TABLE accessories(
     image_url_1 TEXT,
     image_url_2 TEXT,
     price INTEGER,
-    description TEXT
+    description TEXT,
     user_id INTEGER
 );
 
@@ -63,7 +63,7 @@ VALUES ('username', 'password', 'public');
 
 INSERT INTO 
 users(username, password_digest, user_type) 
-VALUES ('username', 'password', 'administrator');
+VALUES ('admin', 'root', 'administrator');
 
 INSERT INTO 
     objects (name, image_url, image_url_1, image_url_2, image_url_3, image_url_4, image_url_5, image_url_6, image_url_7, image_url_8, image_url_9, price, description, user_id)

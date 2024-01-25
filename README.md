@@ -22,7 +22,7 @@ This application is an alternative site to alabaster.industries. It is styled di
 
 ### Deployed App
 [Include a link to the deployed app.]
-[Example: [App Name](https://your-app-url.com)]
+[Example: [Alabaster Alt](https://your-app-url.com)]
 
 ### Project Board
 

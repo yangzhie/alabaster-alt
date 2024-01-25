@@ -41,22 +41,15 @@ input {
     margin-bottom: 10px;
     box-sizing: border-box;
     background-color: #000;
-    /* Set input box background color to black */
     color: #fff;
-    /* Set text color to white */
     border: none;
-    /* Remove border */
     box-shadow: none;
-    /* Remove box shadow */
 }
 
 input:hover {
     background-color: #fff;
-    /* Change background color on hover */
     color: #000;
     transition: background-color 0.3s, color 0.3s;
-
-    /* Change text color on hover */
 }
 
 button {
