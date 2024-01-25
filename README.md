@@ -9,14 +9,19 @@ This application is an alternative site to alabaster.industries. It is styled di
 
 ## Technologies Used
 
-- [express]
-- [ejs]
-- [express-ejs-layouts]
-- [express-session]
-- [method-override]
-- [dotenv]
-- [pg]
-- [bcrypt]
+- express
+- ejs
+- express-ejs-layouts
+- express-session
+- method-override
+- dotenv
+- pg
+- bcrypt
+- HTML
+- CSS
+- JS
+- Node
+- PostgreSQL
 
 ## Getting Started
 
