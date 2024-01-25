@@ -5,7 +5,7 @@ This application is an alternative site to alabaster.industries. It is styled di
 
 ## Screenshots
 
-![Landing Page](https://imgur.com/a/rcHa27S)
+![Landing Page](my-board.PNG)
 
 ## Technologies Used
 

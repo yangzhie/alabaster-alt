@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 3000;
 
 const expressLayouts = require("express-ejs-layouts");
 const methodOverride = require("method-override");
@@ -26,7 +26,7 @@ app.use(expressLayouts);
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
-    secret: process.env.SECRET,
+    secret: process.env.SECRET || "arnav",
     resave: false,
     saveUninitialized: false
 }));
