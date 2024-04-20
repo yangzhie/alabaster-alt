@@ -10,9 +10,11 @@
 
 <a href="/watches/<%= watch.id %>/edit" class="edit-watch">EDIT WATCH</a>
 
+<div class="delete-form">
 <form action="/watches/<%= watch.id %>?_method=delete" method="post">
     <button class="delete-btn">DELETE</button>
 </form>
+</div>
 
 <% } %>
 

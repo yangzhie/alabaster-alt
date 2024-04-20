@@ -7,8 +7,6 @@ const port = process.env.PORT || 3000;
 const expressLayouts = require("express-ejs-layouts");
 const methodOverride = require("method-override");
 const setCurrentUser = require("./middlewares/set-current-user.js");
-const ensureLoggedIn = require("./middlewares/ensure-logged-in.js");
-const auth = require("./middlewares/auth.js");
 
 const db = require("./db/index");
 const session = require("express-session");

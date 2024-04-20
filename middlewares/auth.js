@@ -1,5 +1,7 @@
+// middleware to check if the user is an admin
 const auth = (req, res, next) => {
 
+    // checks if the current user is an admin
     if (res.locals.currentUser.user_type === "administrator") {
 
         return next();

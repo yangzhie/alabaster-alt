@@ -10,9 +10,11 @@
 
 <a href="/objects/<%= object.id %>/edit" class="edit-object">EDIT OBJECT</a>
 
+<div class="delete-form">
 <form action="/objects/<%= object.id %>?_method=delete" method="post">
     <button class="delete-btn">DELETE</button>
 </form>
+</div>
 
 <% } %>
 

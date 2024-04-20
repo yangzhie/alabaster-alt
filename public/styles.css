@@ -138,6 +138,7 @@ h5 {
 }
 
 .create {
+    color: white;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -205,6 +206,7 @@ h5 {
 }
 
 .a-name a {
+    color: white;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -266,6 +268,7 @@ h5 {
 }
 
 .a-name a {
+    color: white;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -364,7 +367,8 @@ h5 {
 
 .alabaster {
     color: white;
-    padding-left: 785px;
+    display: flex;
+    justify-content: center;
 }
 
 .w-i-container {
@@ -400,10 +404,11 @@ h5 {
 }
 
 .edit-watch {
+    display: flex;
+    justify-content: center;
     color: #007bff;
     text-align: center;
     color: white;
-    padding-left: 771px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -472,12 +477,6 @@ h5 {
 
 /* OBJECTS INFO PAGE */
 
-
-.alabaster {
-    color: white;
-    padding-left: 785px;
-}
-
 .o-i-container {
     max-width: 600px;
     margin: 0 auto;
@@ -511,10 +510,11 @@ h5 {
 }
 
 .edit-object {
+    display: flex;
+    justify-content: center;
     color: #007bff;
     text-align: center;
     color: white;
-    padding-left: 771px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -591,13 +591,6 @@ h5 {
 
 /* ACCESSORY INFO PAGE */
 
-
-.alabaster {
-    color: white;
-    padding-left: 785px;
-    padding-top: 15px;
-}
-
 .a-i-container {
     max-width: 600px;
     margin: 0 auto;
@@ -631,10 +624,11 @@ h5 {
 }
 
 .edit-accessorie {
+    display: flex;
+    justify-content: center;
     color: #007bff;
     text-align: center;
     color: white;
-    padding-left: 750px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -768,15 +762,21 @@ button.post-edit-btn:hover {
 
 /* DELETE BTN */
 .delete-btn {
+    display: flex;
+    justify-content: center;
     color: #007bff;
     text-align: center;
     color: white;
     transition: background-color 0.3s, color 0.3s;
     border: none;
     justify-self: center;
-    padding-left: 789px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.delete-form {
+    display: flex;
+    justify-content: center;
 }
 
 .delete-btn:hover {
