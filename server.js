@@ -13,6 +13,7 @@ const session = require("express-session");
 
 // requiring routes
 const sessionRouter = require("./routes/session_router.js");
+const registerRouter = require("./routes/register_router.js");
 const homeRouter = require("./routes/home_router.js");
 const watchesRouter = require("./routes/watches_router.js");
 const objectsRouter = require("./routes/objects_router.js");
@@ -32,6 +33,8 @@ app.use(setCurrentUser);
 
 // using routes
 app.use(sessionRouter);
+
+app.use(registerRouter);
 
 app.use(homeRouter);
 

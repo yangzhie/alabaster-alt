@@ -28,7 +28,6 @@ router.post("/login", (req, res) => {
         if (err) {
 
             console.log(err);
-            res.render("login");
             return;
 
         }
@@ -37,7 +36,7 @@ router.post("/login", (req, res) => {
         if (result.rows.length === 0) {
 
             console.log("User does not exist.");
-            res.render("login");
+            res.send("Login error. Please re-check username or password.");
             return;
 
         }
@@ -53,7 +52,6 @@ router.post("/login", (req, res) => {
 
             if (err) {
                 console.log(err);
-                res.render("login");
                 return;
             }
 
@@ -61,7 +59,7 @@ router.post("/login", (req, res) => {
             if (!isCorrect) {
 
                 console.log("Your username or password is incorrect.");
-                res.render("login");
+                res.render("login-error");
                 return;
 
             }

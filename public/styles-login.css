@@ -73,3 +73,30 @@ img {
     left: 50%;
     transform: translateX(-50%);
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Register */
+
+.register-button {
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-family: 'Padauk', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.register-button:hover {
+    color: red;
+}

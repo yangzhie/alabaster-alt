@@ -1,11 +1,16 @@
 # Alabaster Industries Alternative
 
-**Description:**
-This application is an alternative site to alabaster.industries. It is styled different to the original but has added features for the administrators to post/edit and delete products.
+This application is an alternative site to alabaster.industries. It is a multi-page CRUD app made using Express and NodeJS. It is styled different to the original website but has added features for the administrators to post/edit and delete products. It also has a sign-up feature for new users to view the site. The site was designed in a way that it would be a permium, invite-only site, thus the site's layout and design.
 
 ## Screenshots
 
-![Landing Page](my-board.PNG)
+![Login Page](public/images/loginpage.PNG)
+![Register Page](public/images/registerpage.PNG)
+![Main Page](public/images/mainpage.PNG)
+![Watches Page](public/images/watchespage.PNG)
+![Watch Page](public/images/watchpage.PNG)
+![New Page](public/images/newpage.PNG)
+![Edit Page](public/images/editpage.PNG)
 
 ## Technologies Used
 
@@ -23,11 +28,9 @@ This application is an alternative site to alabaster.industries. It is styled di
 - Node
 - PostgreSQL
 
-## Getting Started
-
 ### Deployed App
 
-None ATM
+--
 
 ### Project Board
 
@@ -35,7 +38,7 @@ None ATM
 
 ## Next Steps
 
-### Planned Future Enhancements (Icebox Items)
+### Planned Future Enhancements
 
 1. [Style the CSS better, have better naming]
 2. [Add new routes that mimic the actual site]

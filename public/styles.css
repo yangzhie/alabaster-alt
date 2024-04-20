@@ -783,3 +783,56 @@ button.post-edit-btn:hover {
     background-color: black;
     color: red;
 }
+
+
+
+
+
+
+
+
+/* Register */
+
+
+.register-username {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.register-username input {
+    width: 200px;
+}
+
+.register-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-password input {
+    width: 200px;
+}
+
+.register-button-form {
+    text-align: center;
+    margin-bottom: 243px;
+}
+
+.sign-up {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sign-up:hover {
+    background-color: black;
+    color: red;
+}
