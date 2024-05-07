@@ -32,7 +32,55 @@ router.post('/register', (req, res) => {
             res.render('register-form');
             return
 
-        } else {
+        }
+
+        if (username === 'admin') {
+
+            const saltRound = 10
+
+            bcrypt.genSalt(saltRound, (err, salt) => {
+
+                if (err) {
+                    console.log(err);
+                    return;
+                }
+
+                bcrypt.hash(password_digest, salt, (err, hashedPass) => {
+
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
+
+                    const sql = `
+                        INSERT INTO users
+                        (username, password_digest, user_type)
+                        VALUES
+                        ($1, $2, 'administrator');
+                    `
+
+                    db.query(sql, [username, hashedPass], (err, result) => {
+
+                        if (err) {
+
+                            console.log(err);
+                            return;
+
+                        } else {
+
+                            console.log('Admin created.');
+                            res.redirect('/')
+                        }
+
+                    })
+
+                })
+
+            })
+
+        }
+
+        else {
 
             const saltRound = 10
 

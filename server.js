@@ -2,8 +2,8 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
-
+const port = 5000;
+//process.env.PORT || 
 const expressLayouts = require("express-ejs-layouts");
 const methodOverride = require("method-override");
 const setCurrentUser = require("./middlewares/set-current-user.js");
