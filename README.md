@@ -2,6 +2,12 @@
 
 This application is an alternative site to alabaster.industries. It is a multi-page CRUD app made using Express and NodeJS. It is styled different to the original website but has added features for the administrators to post/edit and delete products. It also has a sign-up feature for new users to view the site. The site was designed in a way that it would be a permium, invite-only site, thus the site's layout and design.
 
+To view CRUD utilities, please log into the website with username: 'admin' and password: 'root'.
+
+### Deployed App
+
+[Deployed Ver.](https://alabaster-alt.onrender.com)
+
 ## Screenshots
 
 ![Login Page](public/images/loginpage.PNG)
@@ -27,10 +33,6 @@ This application is an alternative site to alabaster.industries. It is a multi-p
 - JS
 - Node
 - PostgreSQL
-
-### Deployed App
-
---
 
 ### Project Board
 
